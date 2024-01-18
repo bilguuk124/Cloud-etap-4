@@ -1,0 +1,43 @@
+server:
+  port: 8081
+
+#bot:
+#  name: CollaborationNotificationBot
+#  token: 6979928974:AAFxyKHCtlPy6IVYXd45Lw5Tpv6fe8BhdQM
+
+bot:
+  name: Cloud_lab4_bot
+  token: 6153994978:AAFNKm-du8z1dv8-oNrT_Flc_PFFykMVrFk
+
+spring:
+  application:
+    name: NOTIFICATION
+
+  kafka:
+    bootstrap-servers: rc1a-6qcf7f94uasls9m1.mdb.yandexcloud.net:9092
+    consumer:
+      group-id: my-group
+      auto-offset-reset: earliest
+    security:
+      protocol: SASL_PLAINTEXT
+
+kafka:
+  topic: "notification"
+  username: "consumer"
+  password: "Gungun123"
+
+  main:
+    allow-bean-definition-overriding: true
+
+cloud:
+  aws:
+    credentials:
+      access-key: YCAJEEJE-HtGsUbhNL_TfMUSl
+      secret-key: YCOSosSL612lNSXHlBEwbAx5L0_UA98RvdFzEDR5
+
+
+queue:
+  name: notification
+
+
+

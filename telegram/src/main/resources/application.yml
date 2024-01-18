@@ -1,0 +1,51 @@
+server:
+  port: 8080
+
+bot:
+  name: Cloud_lab4_bot
+  token: 6153994978:AAFNKm-du8z1dv8-oNrT_Flc_PFFykMVrFk
+
+spring:
+  application:
+    name: TELEGRAM-BOT
+
+  datasource:
+    username: 'bilguuk124'
+    url: jdbc:postgresql://rc1a-8u8u2nzxds1afb4h.mdb.yandexcloud.net:6432/bilguun?targetServerType=master
+    password: 'Gungun124'
+  jpa:
+    properties:
+      hibernate:
+        format_sql: 'true'
+        enable_lazy_load_no_trans: 'true'
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+#  kafka:
+#    bootstrap-servers: rc1a-6qcf7f94uasls9m1.mdb.yandexcloud.net:9091
+#    security:
+#      protocol: SASL_SSL
+#    ssl:
+#      trust-store-password: Gungun124
+#      trust-store-location: ssl
+#    jaas:
+#      enabled: true
+#      options:
+#        username: guest
+#        password: Gungun124
+#        serviceName: producer
+#        mechanism: SCRAM-SHA-512
+#
+#      login-module: org.apache.kafka.common.security.scram.ScramLoginModule
+#      control-flag: required
+
+
+kafka:
+  topic: "notification"
+  username: "guest"
+  password: "Gungun124"
+
+queue:
+  name: notification
